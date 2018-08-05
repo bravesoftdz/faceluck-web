@@ -1,30 +1,20 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
-import {
-  Container, Header, Sidebar, Content, Feed,
-} from './styles';
+import Login from '../Login';
+import Panel from '../Panel';
+import PrivateRoute from '@/components/PrivateRoute';
 
-export default class Main extends Component {
-  static propTypes = {
-    prop: PropTypes,
-  };
+const Main = () => (
+  <Router>
+    <Fragment>
+      <PrivateRoute exact path="/" component={Panel} />
+      <PrivateRoute path="/profile" component={Panel} />
+      <PrivateRoute path="/users" component={Panel} />
+      <PrivateRoute path="/feed" component={Panel} />
+      <Route path="/login" component={Login} />
+    </Fragment>
+  </Router>
+);
 
-  render() {
-    return (
-      <Container>
-        <Header>
-HEADER
-        </Header>
-        <Content>
-          <Sidebar>
-SIDEBAR
-          </Sidebar>
-          <Feed>
-FEED
-          </Feed>
-        </Content>
-      </Container>
-    );
-  }
-}
+export default Main;

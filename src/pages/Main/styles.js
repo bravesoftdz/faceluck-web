@@ -14,7 +14,7 @@ export const Header = styled.div`
 export const Content = styled.div`
   display: flex;
   width: 100vw;
-  height: 95vh;
+  height: 100%;
 `;
 
 export const Sidebar = styled.div`

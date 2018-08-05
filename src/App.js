@@ -2,8 +2,8 @@ import React from 'react';
 
 import './styles/global';
 
-import Login from './pages/Login';
+import Main from './pages/Main';
 
-const App = () => <Login />;
+const App = () => <Main />;
 
 export default App;

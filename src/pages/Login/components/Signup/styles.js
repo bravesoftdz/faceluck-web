@@ -1,24 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-`;
-
-export const ContainerForm = styled.div`
-  display: flex;
-  height: 100%;
-  justify-content: center;
-  align-items: center;
-  background: #dfe3ee;
-  border-radius: 3px;
-  border-top: 6px solid #4b6da7;
-  height: 500px;
-  width: 380px;
-`;
-
 export const LoginForm = styled.form`
   display: flex;
   flex-direction: column;
